@@ -1,7 +1,7 @@
 all:
 	driver=$(driver) eval "echo \"$$(<Dockerfile)\"" 2> /dev/null | docker build -t docteurklein/sqitch:$(tag) -
 
-push:
+push: all
 	git checkout -b $(tag)
 	driver=$(driver) eval "echo \"$$(<Dockerfile)\"" 2> /dev/null > Dockerfile
 	git commit -am"auto-build $(tag)"

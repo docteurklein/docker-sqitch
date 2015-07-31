@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if [ $# -gt 0 ]; then
+  cmd="$*"
+else
+  cmd="help"
+fi
+
+docker run -it --rm -v $PWD:/src -v /tmp:/tmp docteurklein/sqitch:pgsql $cmd

@@ -1,12 +1,14 @@
-docker-sqitch
--------------
+Adopted from https://github.com/docteurklein/docker-sqitch
+
+afis-docker-sqitch
+------------------
 
 # run
 
-    docker run --rm docteurklein/sqitch:pgsql
+    docker run --rm -v $PWD:/src docteurklein/sqitch:pgsql $*
+    or
+    sqitch
 
 # build
 
-    driver=Pg tag=pgsql make
-    driver=mysql tag=mysql make
-
+    ./build

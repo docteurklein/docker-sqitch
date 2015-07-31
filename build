@@ -3,4 +3,4 @@ sed "s|\$driver|Pg|" Dockerfile | docker build -t docteurklein/sqitch:pgsql -
 current_dir="$(readlink -f $(dirname $0))"
 
 set -x
-sudo ln -sf $current_dir/sqitch /usr/local/bin/sqitch
+sudo ln -sf $current_dir/run /usr/local/bin/sqitch

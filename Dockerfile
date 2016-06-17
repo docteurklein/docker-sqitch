@@ -1,6 +1,7 @@
 FROM perl:latest
+#RUN apk --update add perl make
+#RUN cpan inc::latest
 RUN cpan App::Sqitch
-RUN cpan DBD::$driver
 VOLUME ["/src"]
 WORKDIR /src
-ENTRYPOINT ["sqitch"]
+ENTRYPOINT ["/usr/local/bin/sqitch"]

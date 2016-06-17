@@ -7,6 +7,7 @@ docker-sqitch
 
 # build
 
-    driver=Pg tag=pgsql make
-    driver=mysql tag=mysql make
+    docker build -t docteurklein/sqitch:base .
+    docker build -t docteurklein/sqitch:pgsql pgsql
+    docker build -t docteurklein/sqitch:mysql mysql
 
